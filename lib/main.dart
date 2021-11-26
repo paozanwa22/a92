@@ -1,14 +1,15 @@
-import 'package:a92/pages/home.dart';
 import 'package:a92/controllers/authC.dart';
 import 'package:a92/controllers/loginC.dart';
+
+import 'package:a92/pages/home.dart';
 import 'package:a92/pages/login.dart';
+
 import 'package:a92/routes/app_page.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 
 void main() async {
-  await GetStorage.init();
   runApp(MyApp());
 }
 

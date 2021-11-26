@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
                 labelText: 'Email',
                 border: OutlineInputBorder(),
               ),
-            ),
+            ), 
             const SizedBox(height: 10),
             Obx(
               () => TextField(
@@ -47,19 +47,10 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Obx(
-              () => CheckboxListTile(
-                value: c.rememberme.value,
-                onChanged: (value) => c.rememberme.toggle(),
-                title: const Text('Remember me'),
-                controlAffinity: ListTileControlAffinity.leading,
-              ),
-            ),
             ElevatedButton(
               onPressed: () => auth.login(
                 c.emailC.text,
                 c.passC.text,
-                c.rememberme.value,
               ),
               child: const Text('LOGIN'),
             ),
